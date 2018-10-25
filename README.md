@@ -1,0 +1,1 @@
+Example EJB3, WSDL, XSD, JPA and gradle project.
