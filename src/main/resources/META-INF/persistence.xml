@@ -9,7 +9,7 @@
         name="shyali-hello-unit"
         transaction-type="JTA">
         <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
-        <jta-data-source>java:/jdbc/shyali-soap</jta-data-source>
+        <jta-data-source>java:/jdbc/shyali-soap-db</jta-data-source>
         <class>com.shyali.jpa.entity.Employee</class>
         <properties>
             <property
