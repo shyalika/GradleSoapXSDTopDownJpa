@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence
+    version="2.0"
+    xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <!-- Persistence unit for the Provisioning schema. -->
+    <persistence-unit
+        name="shyali-hello-unit"
+        transaction-type="JTA">
+        <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+        <jta-data-source>java:/jdbc/shyali-soap</jta-data-source>
+        <class>com.shyali.jpa.entity.Employee</class>
+        <properties>
+            <property
+                name="javax.persistence.lock.timeout"
+                value="5000"/>
+            <property
+                name="openjpa.jdbc.SynchronizeMappings"
+                value="validate"/>
+            <property
+                name="openjpa.InitializeEagerly"
+                value="true"/>
+            <property
+                name="openjpa.jdbc.SchemaFactory"
+                value="dynamic"/>
+            <property
+                name="openjpa.jdbc.DBDictionary"
+                value="mysql(TableType=ndb)"/>
+            <property
+                name="openjpa.jdbc.EagerFetchMode"
+                value="parallel"/>
+            <property
+                name="openjpa.jdbc.SubclassFetchMode"
+                value="join"/>
+            <property
+                name="openjpa.BrokerFactory"
+                value="jdbc"/>
+            <property
+                name="openjpa.DataCache"
+                value="false"/>
+            <property
+                name="openjpa.FlushBeforeQueries"
+                value="true"/>
+            <property
+                name="openjpa.ConnectionRetainMode"
+                value="transaction"/>
+            <!-- <property name="openjpa.Log" value="DefaultLevel=WARN, Runtime=INFO, Query=TRACE, SQL=TRACE, 
+                JDBC=TRACE, DataCache=TRACE, Metadata=TRACE, Tools=TRACE" /> -->
+            <property
+                name="openjpa.Log"
+                value="DefaultLevel=WARN, Runtime=WARN"/>
+            <property
+                name="openjpa.MetaDataFactory"
+                value="jpa"/>
+        </properties>
+    </persistence-unit>
+</persistence>
