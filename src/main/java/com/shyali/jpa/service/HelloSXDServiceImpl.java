@@ -34,11 +34,6 @@ public class HelloSXDServiceImpl implements HelloXSD {
     @PersistenceContext
     protected EntityManager entityManager;
 
-    // @Override
-    public String helloName(String name) {
-        return "Hello " + name + " welcome to XSD";
-    }
-
     @Override
     public SayHelloResponse helloName(SayHelloRequest parameters) {
         SayHelloResponse res = new SayHelloResponse();
