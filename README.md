@@ -12,13 +12,11 @@ This project is a simple example to build and deploy a web service with soap, EJ
 	* copy the module.xml file in the database directory to the same location. NOTE: match the module name in the module.xml file to the standalone.xml
 
 
-4. Checkout the project.
-
-5. Go the the project folder
+4. Checkout the project and navigate to the project folder
 
 6. Run the command ```gradle init```
 
-7. Build the projet using ```gradle clean assemble``` command
+7. Build the projcet using ```gradle clean assemble``` command
 
 8. Copy the GradleSoapXSDTopDownJpa.jar file to the JBOSS_HOME/standalone/deployments directory
 
